@@ -12,4 +12,4 @@ RUN install2.r --error --deps TRUE \
     doParallel \
     && rm -rf /tmp/downloaded_packages/
 
-RUN Rscript -e 'source("http://bioconductor.org/biocLite.R");biocLite("Biobase");biocLite("biomaRt");biocLite("RnBeads");biocLite("RnBeads.hg37")'
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R");biocLite("Biobase");biocLite("biomaRt");biocLite("RnBeads");biocLite("RnBeads.hg19")'
