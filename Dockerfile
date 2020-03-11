@@ -13,3 +13,5 @@ RUN install2.r --error --deps TRUE \
     && rm -rf /tmp/downloaded_packages/
 
 RUN Rscript -e 'BiocManager::install(c("Biobase", "biomaRt", "RnBeads", "RnBeads.hg38"))'
+
+RUN Rscript -e 'BiocManager::install("wateRmelon")'
