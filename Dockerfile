@@ -1,4 +1,4 @@
-FROM r-base:3.6.3
+FROM bioconductor/bioconductor_docker:RELEASE_3_10
 
 RUN apt-get update && apt-get install -y \
     r-cran-xml \
@@ -12,5 +12,4 @@ RUN install2.r --error --deps TRUE \
     doParallel \
     && rm -rf /tmp/downloaded_packages/
 
-RUN Rscript -e 'if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager"); BiocManager::install("Biobase"); BiocManager::install("biomaRt"); BiocManager::install("RnBeads"); BiocManager::install("RnBeads.hg19");'
+RUN Rscript -e 'BiocManager::install(c("Biobase", "biomaRt", "RnBeads", "RnBeads.hg19"))'
