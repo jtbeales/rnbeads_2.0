@@ -12,4 +12,4 @@ RUN install2.r --error --deps TRUE \
     doParallel \
     && rm -rf /tmp/downloaded_packages/
 
-RUN Rscript -e 'BiocManager::install(c("Biobase", "biomaRt", "RnBeads", "RnBeads.hg19"))'
+RUN Rscript -e 'BiocManager::install(c("Biobase", "biomaRt", "RnBeads", "RnBeads.hg38"))'
