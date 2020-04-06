@@ -16,4 +16,4 @@ RUN Rscript -e 'BiocManager::install(c("Biobase", "biomaRt", "RnBeads", "RnBeads
 
 RUN Rscript -e 'BiocManager::install(c("wateRmelon","LOLA", "GOstats"))'
 
-RUN Rscript -e 'install.packages("simpleCache","wordcloud")'
+RUN Rscript -e 'install.packages(c("simpleCache","wordcloud"))'
