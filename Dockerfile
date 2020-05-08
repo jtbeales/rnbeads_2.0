@@ -14,6 +14,6 @@ RUN install2.r --error --deps TRUE \
 
 RUN Rscript -e 'BiocManager::install(c("Biobase", "biomaRt", "RnBeads", "RnBeads.hg38"))'
 
-RUN Rscript -e 'BiocManager::install(c("wateRmelon","LOLA", "GOstats"))'
+RUN Rscript -e 'BiocManager::install(c("wateRmelon","LOLA", "GOstats","GenomicRanges","Repitools"))'
 
-RUN Rscript -e 'install.packages(c("simpleCache","wordcloud"))'
+RUN Rscript -e 'install.packages(c("simpleCache","wordcloud","tidyverse"))'
